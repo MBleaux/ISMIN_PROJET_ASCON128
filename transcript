@@ -1,0 +1,129 @@
+vsim LIB_BENCH.ascon_top_tb(ascon_top_tb_arch)
+# vsim LIB_BENCH.ascon_top_tb(ascon_top_tb_arch) 
+# Start time: 19:52:09 on Jan 01,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading lib_rtl.ascon_pack
+# Loading LIB_BENCH.ascon_top_tb(ascon_top_tb_arch)
+# Loading lib_rtl.ascon_top(ascon_top_arch)
+# Loading lib_rtl.permutation_finale(permutation_finale_arch)
+# Loading lib_rtl.mux_state(mux_state_arch)
+# Loading lib_rtl.xor_begin(xor_begin_arch)
+# Loading lib_rtl.add_const(add_const_arch)
+# Loading lib_rtl.substitution(substitution_arch)
+# Loading lib_rtl.s_box(s_box_arch)
+# Loading lib_rtl.diffusion(diffusion_arch)
+# Loading lib_rtl.xor_end(xor_end_arch)
+# Loading lib_rtl.state_register_w_en(state_register_w_en_arch)
+# Loading lib_rtl.register_w_en(register_w_en_arch)
+# Loading lib_rtl.mde_ascon_moore(mde_ascon_moore_arch)
+# Loading lib_rtl.compteur_double_init(compteur_double_init_arch)
+# Loading lib_rtl.compteur_bloc_init(compteur_bloc_init_arch)
+add wave -position insertpoint sim:/ascon_top_tb/*
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /ascon_top_tb/DUT/Permutation_And_Xor/Pc
+run
+run
+run
+run
+run
+# ** Fatal: (vsim-3421) Value 4 is out of range 0 to 3.
+#    Time: 550 ns  Iteration: 1  Process: /ascon_top_tb/DUT/Block_Counter/seq_0 File: SRC/RTL/compteur_bloc_init.vhd Line: 49
+# Fatal error in Process seq_0 at SRC/RTL/compteur_bloc_init.vhd line 49
+# 
+# HDL call sequence:
+# Stopped at SRC/RTL/compteur_bloc_init.vhd 49 Process seq_0
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at SRC/RTL/compteur_bloc_init.vhd 49 Process seq_0
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at SRC/RTL/compteur_bloc_init.vhd 49 Process seq_0
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at SRC/RTL/compteur_bloc_init.vhd 49 Process seq_0
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at SRC/RTL/compteur_bloc_init.vhd 49 Process seq_0
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at SRC/RTL/compteur_bloc_init.vhd 49 Process seq_0
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at SRC/RTL/compteur_bloc_init.vhd 49 Process seq_0
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at SRC/RTL/compteur_bloc_init.vhd 49 Process seq_0
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at SRC/RTL/compteur_bloc_init.vhd 49 Process seq_0
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at SRC/RTL/compteur_bloc_init.vhd 49 Process seq_0
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at SRC/RTL/compteur_bloc_init.vhd 49 Process seq_0
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at SRC/RTL/compteur_bloc_init.vhd 49 Process seq_0
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at SRC/RTL/compteur_bloc_init.vhd 49 Process seq_0
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at SRC/RTL/compteur_bloc_init.vhd 49 Process seq_0
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at SRC/RTL/compteur_bloc_init.vhd 49 Process seq_0
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at SRC/RTL/compteur_bloc_init.vhd 49 Process seq_0
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at SRC/RTL/compteur_bloc_init.vhd 49 Process seq_0
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at SRC/RTL/compteur_bloc_init.vhd 49 Process seq_0
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at SRC/RTL/compteur_bloc_init.vhd 49 Process seq_0
+# 

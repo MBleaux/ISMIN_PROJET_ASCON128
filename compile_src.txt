@@ -1,0 +1,92 @@
+#!/bin/bash
+
+#export PROJECTNAME="."
+#echo "the project location is : $PROJECTNAME"
+#echo "removing libs"
+
+echo -e "\e[00;32mInitializing...\e[00m"
+echo -e "\e[00;32mRemoving libs...\e[00m"
+vdel -lib LIB/LIB_RTL -all
+vdel -lib LIB/LIB_BENCH -all
+
+#echo "creating library "
+echo -e "\e[00;32mCreating library\e[00m"
+
+vlib LIB/LIB_RTL
+vmap LIB_RTL LIB/LIB_RTL
+vlib LIB/LIB_BENCH
+vmap LIB_BENCH LIB/LIB_BENCH
+
+# compilation des fichiers sources
+#echo "compile vhdl sources"
+echo -e "\e[00;32mCompile VHDL sources\e[00m"
+
+vcom -work LIB_RTL SRC/RTL/ascon_pack.vhd
+echo -e "\e[00;34mFile compiled\e[00m"
+vcom -work LIB_RTL SRC/RTL/add_const.vhd
+echo -e "\e[00;34mFile compiled\e[00m"
+vcom -work LIB_RTL SRC/RTL/s_box.vhd
+echo -e "\e[00;34mFile compiled\e[00m"
+vcom -work LIB_RTL SRC/RTL/substitution.vhd
+echo -e "\e[00;34mFile compiled\e[00m"
+vcom -work LIB_RTL SRC/RTL/diffusion.vhd
+echo -e "\e[00;34mFile compiled\e[00m"
+vcom -work LIB_RTL SRC/RTL/permutation_base.vhd
+echo -e "\e[00;34mFile compiled\e[00m"
+vcom -work LIB_RTL SRC/RTL/permutation_inter.vhd
+echo -e "\e[00;34mFile compiled\e[00m"
+vcom -work LIB_RTL SRC/RTL/permutation_finale.vhd
+echo -e "\e[00;34mFile compiled\e[00m"
+vcom -work LIB_RTL SRC/RTL/mux_state.vhd
+echo -e "\e[00;34mFile compiled\e[00m"
+vcom -work LIB_RTL SRC/RTL/state_register_w_en.vhd
+echo -e "\e[00;34mFile compiled\e[00m"
+vcom -work LIB_RTL SRC/RTL/state_register.vhd
+echo -e "\e[00;34mFile compiled\e[00m"
+vcom -work LIB_RTL SRC/RTL/register_w_en.vhd
+echo -e "\e[00;34mFile compiled\e[00m"
+vcom -work LIB_RTL SRC/RTL/xor_begin.vhd
+echo -e "\e[00;34mFile compiled\e[00m"
+vcom -work LIB_RTL SRC/RTL/xor_end.vhd
+echo -e "\e[00;34mFile compiled\e[00m"
+vcom -work LIB_RTL SRC/RTL/mde_ascon_moore.vhd
+echo -e "\e[00;34mFile compiled\e[00m"
+vcom -work LIB_RTL SRC/RTL/compteur_double_init.vhd
+echo -e "\e[00;34mFile compiled\e[00m"
+vcom -work LIB_RTL SRC/RTL/compteur_bloc_init.vhd
+echo -e "\e[00;34mFile compiled\e[00m"
+vcom -work LIB_RTL SRC/RTL/ascon_top.vhd
+echo -e "\e[00;34mFile compiled\e[00m"
+
+#vcom -work LIB_RTL $PROJECTNAME/SRC/RTL/ascon_top.vhd
+
+# compilation des fichiers TB
+#echo "compile vhdl test bench"
+echo -e "\e[00;32mCompile VHDL test bench\e[00m"
+vcom -work LIB_BENCH SRC/BENCH/add_const_tb.vhd
+echo -e "\e[00;34mFile compiled\e[00m"
+vcom -work LIB_BENCH SRC/BENCH/substitution_tb.vhd
+echo -e "\e[00;34mFile compiled\e[00m"
+vcom -work LIB_BENCH SRC/BENCH/diffusion_tb.vhd
+echo -e "\e[00;34mFile compiled\e[00m"
+vcom -work LIB_BENCH SRC/BENCH/permutation_base_tb.vhd
+echo -e "\e[00;34mFile compiled\e[00m"
+vcom -work LIB_BENCH SRC/BENCH/permutation_inter_tb.vhd
+echo -e "\e[00;34mFile compiled\e[00m"
+vcom -work LIB_BENCH SRC/BENCH/permutation_finale_tb.vhd
+echo -e "\e[00;34mFile compiled\e[00m"
+vcom -work LIB_BENCH SRC/BENCH/ascon_top_tb.vhd
+echo -e "\e[00;34mFile compiled\e[00m"
+
+#vcom -work LIB_BENCH $PROJECTNAME/SRC/BENCH/ascon_top_tb.vhd
+
+# lancement du simulateur
+#echo "compilation finished"
+#echo "to start the simulation, type vsim&"
+
+echo -e "\e[00;35mCompilation finished!\e[00m"
+echo -e "\e[00;35mTo start the simulation, type vsim&!\e[00m"
+
+# ATTENTION un seul VSIM decommenté à la fois!
+
+#vsim LIB_BENCH.ascon_top_tb_conf #-do ascon_top_wave.do

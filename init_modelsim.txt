@@ -1,0 +1,6 @@
+#!/bin/bash
+export MTI_HOME=/home/mario/intelFPGA/20.1/modelsim_ase
+
+PATH=$PATH:$MTI_HOME/linux
+
+export PATH
